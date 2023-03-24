@@ -1,0 +1,67 @@
+From 0fba4572d87594a3c73d59a209f38c5392da3412 Mon Sep 17 00:00:00 2001
+From: "Brett T. Warden" <brett.t.warden@intel.com>
+Date: Fri, 24 Mar 2023 16:42:31 -0700
+Subject: [PATCH] Support Python >= 3.10
+
+---
+ attrdict/default.py | 2 +-
+ attrdict/mapping.py | 2 +-
+ attrdict/merge.py   | 2 +-
+ attrdict/mixins.py  | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/attrdict/default.py b/attrdict/default.py
+index a5e5bcb2887a..692f1177f59d 100644
+--- a/attrdict/default.py
++++ b/attrdict/default.py
+@@ -1,7 +1,7 @@
+ """
+ A subclass of MutableAttr that has defaultdict support.
+ """
+-from collections import Mapping
++from collections.abc import Mapping
+ 
+ import six
+ 
+diff --git a/attrdict/mapping.py b/attrdict/mapping.py
+index 02ebac84a11a..560e4abe6cd9 100644
+--- a/attrdict/mapping.py
++++ b/attrdict/mapping.py
+@@ -1,7 +1,7 @@
+ """
+ An implementation of MutableAttr.
+ """
+-from collections import Mapping
++from collections.abc import Mapping
+ 
+ import six
+ 
+diff --git a/attrdict/merge.py b/attrdict/merge.py
+index 229596cba625..f5ecf38dfed3 100644
+--- a/attrdict/merge.py
++++ b/attrdict/merge.py
+@@ -1,7 +1,7 @@
+ """
+ A right-favoring Mapping merge.
+ """
+-from collections import Mapping
++from collections.abc import Mapping
+ 
+ 
+ __all__ = ['merge']
+diff --git a/attrdict/mixins.py b/attrdict/mixins.py
+index cbe869fcb338..1265e20606a5 100644
+--- a/attrdict/mixins.py
++++ b/attrdict/mixins.py
+@@ -2,7 +2,7 @@
+ Mixin Classes for Attr-support.
+ """
+ from abc import ABCMeta, abstractmethod
+-from collections import Mapping, MutableMapping, Sequence
++from collections.abc import Mapping, MutableMapping, Sequence
+ import re
+ 
+ import six
+-- 
+2.40.0
+
