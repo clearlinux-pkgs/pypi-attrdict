@@ -7,7 +7,7 @@
 #
 Name     : pypi-attrdict
 Version  : 2.0.1
-Release  : 6
+Release  : 7
 URL      : https://files.pythonhosted.org/packages/3f/72/614aae677d28e81a5bf830fadcf580803876ef76e0306902d3ca5790cd9a/attrdict-2.0.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/3f/72/614aae677d28e81a5bf830fadcf580803876ef76e0306902d3ca5790cd9a/attrdict-2.0.1.tar.gz
 Summary  : A dict with attribute-style access
